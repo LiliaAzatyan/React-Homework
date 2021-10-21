@@ -12,6 +12,7 @@ module.exports = {
          rules: [
              {
                 test: /.(jsx?)$/,
+                exclude: /node_modules/,
                 use: 'babel-loader',
              },
              {
@@ -41,8 +42,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name.css]',
         }),
-       // new webpack.DefinePlugin({
-         //   'process.env.NODE_ENV': JSON.Stringify('production'),
-        //})
+        
     ],
 }
